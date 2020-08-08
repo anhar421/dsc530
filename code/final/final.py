@@ -78,38 +78,51 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 # plt.title('Species classification')
 # plt.xlabel('Classification')
 # plt.ylabel('# of species')
+
+# #Calculate mean, mode, spread
+# #Mean
+# print(master_df.mean())
+#
+# #Mode
+# print(master_df.mode())
+#
+# #Spread
+# print(master_df.var())
+
+# #PMF
+# #Create new dataframes: Large planets and Small planets and compare their species heights
+# pmf_df = master_df[["name", "average_height", "diameter"]]
+# pmf_df = pmf_df.sort_values(by=["diameter"])
+# pmf_df.dropna(inplace=True)
+
+# #Split dataframe into two sets: large planets and small planets
+# small = pmf_df[pmf_df["diameter"] < 12250]
+# large = pmf_df[pmf_df["diameter"] > 12250]
+#
+# #Create PMF
+# pmf1 = thinkstats2.Pmf(small.average_height, label='Small planets (< 12250 km)')
+# pmf2 = thinkstats2.Pmf(large.average_height, label='Large planets (> 12250 km)')
+
+# #Plot PMF
+# thinkplot.Hist(pmf1, align='right', width=5)
+# thinkplot.Hist(pmf2, align='left', width=5)
+# thinkplot.Config(title= 'Species height probability vs Planet size', xlabel='Average height (cm)',
+#                  ylabel='Probability', axis=[85, 305, 0, 0.35])
 # plt.show()
 
-#Calculate mean, mode, spread
-#Mean
-print(master_df.mean())
+# #CDF
+# #Average species height
+# cdf = thinkstats2.Cdf(master_df.average_height, label='average_height')
+# thinkplot.Cdf(cdf)
+# thinkplot.Show(title='Average height CDF', xlabel='Avg height (cm)', ylabel='CDF')
 
-#Mode
-print(master_df.mode())
+mean = master_df.average_height.mean()
+std = master_df.average_height.std()
 
-#Spread
-print(master_df.var())
+xs = [-2, 2]
+fxs, fys = thinkstats2.FitLine(xs, inter=mean, slope=std)
+thinkplot.Plot(fxs, fys, color='gray', label='model')
 
-#PMF
-#Create new dataframes: Large planets and Small planets and compare their species heights
-pmf_df = master_df[["name", "average_height", "diameter"]]
-pmf_df = pmf_df.sort_values(by=["diameter"])
-pmf_df.dropna(inplace=True)
-
-#Split dataframe into two sets: large planets and small planets
-small = pmf_df[pmf_df["diameter"] < 12250]
-large = pmf_df[pmf_df["diameter"] > 12250]
-
-#Create PMF
-pmf1 = thinkstats2.Pmf(small.average_height, label='Small planets (< 12250 km)')
-pmf2 = thinkstats2.Pmf(large.average_height, label='Large planets (> 12250 km)')
-
-#Plot PMF
-thinkplot.Hist(pmf1, align='right', width=5)
-thinkplot.Hist(pmf2, align='left', width=5)
-thinkplot.Config(title= 'Species height probability vs Planet size', xlabel='Average height (cm)',
-                 ylabel='Probability', axis=[85, 305, 0, 0.35])
-plt.show()
-#CDF
-#
-
+xs, ys = thinkstats2.NormalProbability(master_df.average_height)
+thinkplot.Plot(xs, ys, label='heights')
+thinkplot.show(title='Average Height Normal Probability Plot', ylabel='Avg height (cm)')
