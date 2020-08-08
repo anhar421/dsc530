@@ -25,7 +25,7 @@ planets['climate'] = planets['climate'].str.replace(",", "")
 planets['climate'] = planets['climate'].str.replace(" ", "_")
 planets['name'] = planets['name'].str.replace(" ", "_")
 planets.drop(["population", "gravity", "terrain"], axis=1, inplace=True)
-planets = planets.set_index("name")
+# planets = planets.set_index("name")
 
 # #Create new dataframe with all relevant variables
 master_df = pd.concat([planets, species], axis=1)
@@ -92,14 +92,20 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 
 #PMF
 #Create new dataframes: Large planets and Small planets and compare their orbital rotations
-pmf_df = planets[['name', "orbital_period", "diameter"]]
-pmf_df = pmf_df.set_index("orbital_period")
+pmf_df = planets[["name", "orbital_period", "diameter"]]
+pmf_df = pmf_df.sort_values(by=["diameter"])
 pmf_df.dropna(inplace=True)
-print(pmf_df)
 
-# thinkplot.PrePlot(2, cols=2)
-#     thinkplot.Hist(first_pmf, align='right', width=width)
-#     thinkplot.Hist(other_pmf, align='left', width=width)
-#     thinkplot.Config(xlabel='weeks',
-#                      ylabel='probability',
-#                      axis=[27, 46, 0, 0.6])
+small = pmf_df[pmf_df["diameter"] < 12250]
+large = pmf_df[pmf_df["diameter"] > 12250]
+
+pmf1 = thinkstats2.Pmf(small.diameter, label='Small planets')
+pmf2 = thinkstats2.Pmf(large.diameter, label='Large planets')
+
+
+thinkplot.Hist(pmf1, align='right')
+thinkplot.Hist(pmf2, align='left')
+thinkplot.Config(xlabel='diameter',
+                 ylabel='probability')
+plt.show()
+
