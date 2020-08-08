@@ -25,7 +25,7 @@ planets['climate'] = planets['climate'].str.replace(",", "")
 planets['climate'] = planets['climate'].str.replace(" ", "_")
 planets['name'] = planets['name'].str.replace(" ", "_")
 planets.drop(["population", "gravity", "terrain"], axis=1, inplace=True)
-# planets = planets.set_index("name")
+planets = planets.set_index("name")
 
 # #Create new dataframe with all relevant variables
 master_df = pd.concat([planets, species], axis=1)
@@ -82,30 +82,34 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 
 #Calculate mean, mode, spread
 #Mean
-# print(master_df.mean())
-#
-# #Mode
-# print(master_df.mode())
-#
-# #Spread
-# print(master_df.var())
+print(master_df.mean())
+
+#Mode
+print(master_df.mode())
+
+#Spread
+print(master_df.var())
 
 #PMF
-#Create new dataframes: Large planets and Small planets and compare their orbital rotations
-pmf_df = planets[["name", "orbital_period", "diameter"]]
+#Create new dataframes: Large planets and Small planets and compare their species heights
+pmf_df = master_df[["name", "average_height", "diameter"]]
 pmf_df = pmf_df.sort_values(by=["diameter"])
 pmf_df.dropna(inplace=True)
 
+#Split dataframe into two sets: large planets and small planets
 small = pmf_df[pmf_df["diameter"] < 12250]
 large = pmf_df[pmf_df["diameter"] > 12250]
 
-pmf1 = thinkstats2.Pmf(small.diameter, label='Small planets')
-pmf2 = thinkstats2.Pmf(large.diameter, label='Large planets')
+#Create PMF
+pmf1 = thinkstats2.Pmf(small.average_height, label='Small planets (< 12250 km)')
+pmf2 = thinkstats2.Pmf(large.average_height, label='Large planets (> 12250 km)')
 
-
-thinkplot.Hist(pmf1, align='right')
-thinkplot.Hist(pmf2, align='left')
-thinkplot.Config(xlabel='diameter',
-                 ylabel='probability')
+#Plot PMF
+thinkplot.Hist(pmf1, align='right', width=5)
+thinkplot.Hist(pmf2, align='left', width=5)
+thinkplot.Config(title= 'Species height probability vs Planet size', xlabel='Average height (cm)',
+                 ylabel='Probability', axis=[85, 305, 0, 0.35])
 plt.show()
+#CDF
+#
 
