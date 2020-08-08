@@ -116,13 +116,49 @@ pd.set_option("display.max_rows", None, "display.max_columns", None)
 # thinkplot.Cdf(cdf)
 # thinkplot.Show(title='Average height CDF', xlabel='Avg height (cm)', ylabel='CDF')
 
-mean = master_df.average_height.mean()
-std = master_df.average_height.std()
+# #Create a normal probability plot
+# mean = master_df.average_height.mean()
+# std = master_df.average_height.std()
+#
+# xs = [-2, 2]
+# fxs, fys = thinkstats2.FitLine(xs, inter=mean, slope=std)
+# thinkplot.Plot(fxs, fys, color='gray', label='model')
+#
+# xs, ys = thinkstats2.NormalProbability(master_df.average_height)
+# thinkplot.Plot(xs, ys, label='heights')
+# thinkplot.show(title='Average Height Normal Probability Plot', ylabel='Avg height (cm)')
 
-xs = [-2, 2]
-fxs, fys = thinkstats2.FitLine(xs, inter=mean, slope=std)
-thinkplot.Plot(fxs, fys, color='gray', label='model')
+#Convert categorical data of species to numerical
+#Create a copy of the master dataframe
+master_df2 = master_df
 
-xs, ys = thinkstats2.NormalProbability(master_df.average_height)
-thinkplot.Plot(xs, ys, label='heights')
-thinkplot.show(title='Average Height Normal Probability Plot', ylabel='Avg height (cm)')
+#Create dicts for mapping
+climate = {'temperate': 1,'arid': 2, 'tropical': 3, 'subtropical': 4, 'hot': 5}
+classification = {'mammal': 1, 'amphibian': 2, 'reptilian': 3, 'insectoid': 4, 'gastropod': 5, 'unknown': 6}
+
+#Map new values to dataframe
+master_df2.climate = [climate[item] for item in master_df2.climate]
+master_df2.classification = [classification[item] for item in master_df2.classification]
+
+# #Create scatter plots
+# #Climate vs average height
+# scatter_climate = thinkstats2.Jitter(master_df2.climate, 0.2)
+# scatter_height = thinkstats2.Jitter(master_df2.average_height)
+#
+# thinkplot.Scatter(scatter_climate, scatter_height)
+# thinkplot.Show(title = 'Average Height Distribution by Climate', xlabel='Climate', ylabel='Height (cm)')
+
+# #Diameter vs classification
+# scatter_diameter = thinkstats2.Jitter(master_df2.diameter)
+# scatter_classification = thinkstats2.Jitter(master_df2.classification, 0.2)
+#
+# thinkplot.Scatter(scatter_diameter, scatter_classification)
+# thinkplot.Show(title = 'Species Classification by Planet Diameter', xlabel='Diameter (km)', ylabel='Classification')
+#
+# #Correlation tests
+# #Spearman correlations
+# print(thinkstats2.SpearmanCorr(master_df2.climate, master_df2.average_height))
+# print(thinkstats2.SpearmanCorr(master_df2.diameter, master_df2.classification))
+
+#Hypothesis test
+
