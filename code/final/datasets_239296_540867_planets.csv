@@ -1,0 +1,36 @@
+name,rotation_period,orbital_period,diameter,climate,gravity,terrain,surface_water,population
+Aleen Minor,NA,NA,NA,NA,NA,NA,0,NA
+Cato Neimoidia,25,278,0,temperate,1 standard,"mountains, fields, forests, rock arches",0,10000000
+Cerea,27,386,NA,temperate,1,verdant,20,450000000
+Champala,27,318,NA,temperate,1,"oceans, rainforests, plateaus",0,3500000000
+Coruscant,24,368,12240,temperate,1 standard,"cityscape, mountains",0,1.00E+12
+Dorin,22,409,13400,temperate,1,NA,0,NA
+Endor,18,402,4900,temperate,0.85 standard,"forests, mountains, lakes",8,30000000
+Geonosis,30,256,11370,arid,0.9 standard,"rock, desert, mountain, barren",5,1.00E+11
+Glee Anselm,33,206,15600,tropical,1,"lakes, islands, swamps, seas",80,500000000
+Iktotch,22,481,NA,arid,1,rocky,0,NA
+Iridonia,29,413,NA,NA,NA,"rocky canyons, acid pools",0,NA
+Kalee,23,378,13850,subtropical,1,"rainforests, cliffs, canyons, seas",0,4000000000
+Kamino,27,463,19720,temperate,1 standard,ocean,100,1000000000
+Kashyyyk,26,381,12765,tropical,1 standard,"jungle, forests, lakes, rivers",60,45000000
+Malastare,26,201,18880,subtropical,1.56,"swamps, deserts, jungles, mountains",0,2000000000
+Mirial,NA,NA,NA,NA,NA,deserts,0,NA
+Mon Cala,21,398,11030,temperate,1,"oceans, reefs, islands",100,27000000000
+Muunilinst,28,412,13800,temperate,1,"plains, forests, hills, mountains",25,5000000000
+Naboo,26,312,12120,temperate,1 standard,"grassy hills, swamps, forests, mountains",12,4500000000
+Nal Hutta,87,413,12150,hot,1 standard,"urban, oceans, swamps, bogs",0,7000000000
+Ojom,NA,NA,NA,frigid,NA,"oceans, glaciers",100,500000000
+Quermia,NA,NA,NA,NA,NA,NA,0,NA
+Rodia,29,305,7549,hot,1 standard,"jungles, oceans, urban, swamps",60,1300000000
+Ryloth,30,305,10600,arid,1,"mountains, valleys, deserts, tundra",5,1500000000
+Shili,NA,NA,NA,temperate,1,"cities, savannahs, seas, plains",0,NA
+Skako,27,384,NA,temperate,1,"urban, vines",0,5.00E+11
+Sullust,20,263,12780,hot,1,"mountains, volcanoes, rocky deserts",5,18500000000
+Tholoth,NA,NA,NA,NA,NA,NA,0,NA
+Toydaria,21,184,7900,temperate,1,"swamps, lakes",0,11000000
+Trandosha,25,371,0,arid,0.62 standard,"mountains, seas, grasslands, deserts",0,42000000
+Troiken,NA,NA,NA,NA,NA,"desert, tundra, rainforests, mountains",0,NA
+Tund,48,1770,12190,NA,NA,"barren, ash",0,0
+Utapau,27,351,12900,arid,1 standard,"scrublands, savanna, canyons, sinkholes",0.9,95000000
+Vulpter,22,391,14900,temperate,1,"urban, barren",0,421000000
+Zolan,NA,NA,NA,NA,NA,NA,0,NA
