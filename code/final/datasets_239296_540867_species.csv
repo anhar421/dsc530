@@ -1,0 +1,36 @@
+name,classification,designation,average_height,skin_colors,hair_colors,eye_colors,average_lifespan,language,homeworld
+Aleena,reptilian,sentient,80,"blue, gray",none,NA,79,Aleena,Aleen Minor
+Neimodian,unknown,sentient,180,"grey, green",none,"red, pink",NA,Neimoidia,Cato Neimoidia
+Cerean,mammal,sentient,200,pale pink,"red, blond, black, white",hazel,NA,Cerean,Cerea
+Chagrian,amphibian,sentient,190,blue,none,blue,NA,Chagria,Champala
+Human,mammal,sentient,180,"caucasian, black, asian, hispanic","blonde, brown, black, red","brown, blue, green, hazel, grey, amber",120,Galactic Basic,Coruscant
+Kel Dor,unknown,sentient,180,"peach, orange, red",none,"black, silver",70,Kel Dor,Dorin
+Ewok,mammal,sentient,100,brown,"white, brown, black","orange, brown",NA,Ewokese,Endor
+Geonosian,insectoid,sentient,178,"green, brown",none,"green, hazel",NA,Geonosian,Geonosis
+Nautolan,amphibian,sentient,180,"green, blue, brown, red",none,black,70,Nautila,Glee Anselm
+Iktotchi,unknown,sentient,180,pink,none,orange,NA,Iktotchese,Iktotch
+Zabrak,mammal,sentient,180,"pale, brown, red, orange, yellow",black,"brown, orange",NA,Zabraki,Iridonia
+Kaleesh,reptilian,sentient,170,"brown, orange, tan",none,yellow,80,Kaleesh,Kalee
+Kaminoan,amphibian,sentient,220,"grey, blue",none,black,80,Kaminoan,Kamino
+Wookiee,mammal,sentient,210,gray,"black, brown","blue, green, yellow, brown, golden, red",400,Shyriiwook,Kashyyyk
+Dug,mammal,sentient,100,"brown, purple, grey, red",none,"yellow, blue",NA,Dugese,Malastare
+Mirialan,mammal,sentient,180,"yellow, green","black, brown","blue, green, red, yellow, brown, orange",NA,Mirialan,Mirial
+Mon Calamari,amphibian,sentient,160,"red, blue, brown, magenta",none,yellow,NA,Mon Calamarian,Mon Cala
+Muun,mammal,sentient,190,"grey, white",none,black,100,Muun,Muunilinst
+Gungan,amphibian,sentient,190,"brown, green",none,orange,NA,Gungan basic,Naboo
+Hutt,gastropod,sentient,300,"green, brown, tan",NA,"yellow, red",1000,Huttese,Nal Hutta
+Besalisk,amphibian,sentient,178,brown,none,yellow,75,besalisk,Ojom
+Quermian,mammal,sentient,240,white,none,yellow,86,Quermian,Quermia
+Rodian,reptilian,sentient,170,"green, blue",NA,black,NA,Galactic Basic,Rodia
+Twi'lek,mammal,sentient,200,"orange, yellow, blue, green, pink, purple, tan",none,"blue, brown, orange, pink",NA,Twi'leki,Ryloth
+Togruta,mammal,sentient,180,"red, white, orange, yellow, green, blue",none,"red, orange, yellow, green, blue, black",94,Togruti,Shili
+Skakoan,mammal,sentient,NA,"grey, green",none,NA,NA,Skakoan,Skako
+Sullustan,mammal,sentient,180,pale,none,black,NA,Sullutese,Sullust
+Tholothian,mammal,sentient,NA,dark,NA,"blue, indigo",NA,NA,Tholoth
+Toydarian,mammal,sentient,120,"blue, green, grey",none,yellow,91,Toydarian,Toydaria
+Trandoshan,reptilian,sentient,200,"brown, green",none,"yellow, orange",NA,Dosh,Trandosha
+Xexto,unknown,sentient,125,"grey, yellow, purple",none,black,NA,Xextese,Troiken
+Toong,unknown,sentient,200,"grey, green, yellow",none,orange,NA,Tundan,Tund
+Pau'an,mammal,sentient,190,grey,none,black,700,Utapese,Utapau
+Vulptereen,unknown,sentient,100,grey,none,yellow,NA,vulpterish,Vulpter
+Clawdite,reptilian,sentient,180,"green, yellow",none,yellow,70,Clawdite,Zolan
