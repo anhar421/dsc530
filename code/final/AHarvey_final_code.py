@@ -189,7 +189,7 @@ CorrelationTest(master_df2.climate, master_df2.classification)
 CorrelationTest(master_df2.rotation_period, master_df2.classification)
 CorrelationTest(master_df2.surface_water, master_df2.classification)
 
-#Multiple regression
+#Regression
 formula = 'average_height ~ diameter + rotation_period + orbital_period + climate + surface_water'
 model = smf.ols(formula, data=master_df2)
 results = model.fit()
